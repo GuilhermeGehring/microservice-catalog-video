@@ -1,0 +1,19 @@
+{
+    "name": "guilhermegehring/microservice-catalog-video",
+    "description": "App with PHP - Catalog Video",
+    "authors": [
+        {
+            "name": "Guilherme Gehring",
+            "email": "guilherme.gehring@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src/Core"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.5"
+    }
+}
