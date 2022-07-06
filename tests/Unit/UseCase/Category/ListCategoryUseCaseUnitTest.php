@@ -29,6 +29,8 @@ class ListCategoryUseCaseUnitTest extends TestCase
             ->shouldReceive('findById')
             ->with($id)
             ->andReturn($this->mockEntity);
+        $this->mockEntity->shouldReceive('id')->andReturn($id);
+        $this->mockEntity->shouldReceive('createdAt')->andReturn(date('Y-m-d H:i:s'));
 
         $this->mockInputDto = Mockery::mock(CategoryInputDto::class, [
             $id,

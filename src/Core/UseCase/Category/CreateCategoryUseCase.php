@@ -4,7 +4,7 @@ namespace Core\UseCase\Category;
 
 use Core\Domain\Entity\Category;
 use Core\Domain\Repository\CategoryRepositoryInterface;
-use Core\UseCase\DTO\Category\{
+use Core\UseCase\DTO\Category\CreateCategory\{
     CategoryCreateInputDto,
     CategoryCreateOutputDto
 };
@@ -32,7 +32,8 @@ class CreateCategoryUseCase
             id: $newCategory->id(),
             name: $category->name,
             description: $category->description,
-            isActive: $category->isActive
+            is_active: $category->isActive,
+            created_at: $newCategory->createdAt()
         );
     }
 }

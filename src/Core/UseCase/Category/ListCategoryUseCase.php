@@ -22,10 +22,11 @@ class ListCategoryUseCase
         $category = $this->repository->findById($input->id);
 
         return new CategoryOutputDto(
-            $category->id,
-            $category->name,
-            $category->description,
-            $category->isActive
+            id: $category->id,
+            name: $category->name,
+            description: $category->description,
+            is_active: $category->isActive,
+            created_at: $category->createdAt()
         );
     }
 }
