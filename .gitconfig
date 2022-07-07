@@ -1,0 +1,17 @@
+[user]
+	name = Guilherme Gehring
+	email = guilherme.gehring@gmail.com
+[core]
+	editor = code --wait
+[alias]
+	s = !git status -s
+	c = !git add --all && git commit -m
+	l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn %C(green)%cr'
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential]
+	helper = "!f() { /var/www/.vscode-server/bin/30d9c6cd9483b2cc586687151bcbcd635f373630/node /tmp/vscode-remote-containers-551df9c2561ddaac42e8a8eda31cb8a146673c69.js $*; }; f"
